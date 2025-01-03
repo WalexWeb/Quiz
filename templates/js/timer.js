@@ -1,8 +1,12 @@
 const timerBackground = document.querySelector(".quiz-timer__progress");
 const timerFill = document.querySelector(".quiz-timer__fill");
 const seconds = document.querySelector("#time");
-// const startBtn = document.getElementById('start')
+const hint = document.querySelector(".projector-hint");
 
+// const startProjBtn = document.querySelector("#startProj");
+// startProjBtn.onclick(timerProgress());
+
+// const startBtn = document.getElementById('startAdmin')
 // startBtn.onclick(timerProgress())
 
 function timerProgress() {
@@ -18,6 +22,12 @@ function timerProgress() {
       clearInterval(timer);
       seconds.innerHTML = 0;
       timerBackground.classList.add("time-limited");
+    }
+
+    let hintTemplate = `<img class="projector-hint__img" src="../static/images/ZnoevHint.jpg" alt="Подсказка..." />`;
+
+    if (sec <= (time - 20)) {
+      hint.innerHTML = hintTemplate;
     }
   }, 1000);
 }

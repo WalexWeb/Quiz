@@ -4,8 +4,8 @@
   --shadow: -6px -6px 5px #fff, -5px -5px 30px #fff, -5px -5px 70px #fff,
     -5px -5px 100px #fff, 6px 6px 30px #000000, 5px 5px 50px #000000;
   --base-color: #8e44ad;
-  --base-color_light: #5e3370;
-  --base-color__dark: #732d91;
+  --base-color__dark: #5e3370;
+  --base-color__light: #732d91;
 }
 
 * {
@@ -49,6 +49,8 @@ body {
   width: 100%;
   display: block;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
   font-size: 1.33rem;
   background-color: rgb(252, 252, 252);
   border: 2px solid var(--base-color);
@@ -62,7 +64,7 @@ body {
 .registration-form__label,
 p {
   text-align: center;
-  margin: 0.5rem 0 1rem;
+  margin-top: 0.3rem;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -212,12 +214,12 @@ p {
 }
 
 .submit:hover {
-  background-color: var(--base-color__dark);
+  background-color: var(--base-color__light);
 }
 
 .submit:focus {
   outline: none;
-  background-color: var(--base-color_light);
+  background-color: var(--base-color__dark);
 }
 
 .quiz-answer.shake {
@@ -254,8 +256,7 @@ p {
 
 .projector {
   position: relative;
-  padding: 2rem 2rem calc(5rem + 30px);
-
+  padding: 2rem 2rem calc(2rem + 30px);
   background-color: rgb(245, 245, 245);
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -275,5 +276,43 @@ p {
   font-weight: bold;
 }
 
+.projector-hint {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.projector-hint__img {
+  height: 35vh;
+  width: 20rem;
+  object-fit: cover;
+  border: 3px solid var(--base-color_light);
+  border-radius: 15px;
+}
+
 /* Рейтинг */
 
+.rating {
+  text-align: center;
+}
+
+.rating tbody tr:nth-child(odd){
+  background-color: var(--base-color);
+  color: rgb(245, 245, 245);
+}
+
+.rating th {
+  padding: 0.6rem;
+  width: 2rem;
+}
+
+.rating td {
+  width: 15rem;
+}
+
+.rating-paragraph {
+
+  color: var(--base-color);
+  font-weight: bold;
+}

@@ -5,29 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Текущий вопрос</title>
-    <!-- <script type="module" src="../js/timer.js"></script> -->
+    <script type="module" src="../js/timer.js"></script>
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
   <body>
     <div class="projector" id="projector">
-       <!-- Вопросы -->
-       <div class="quiz-header" id="header">
-          <h1 class="title">Загружаем раздел...</h1>
+      <!-- Вывод вопросов -->
+      <div class="quiz-header" id="header">
+        <h1 class="title">Загружаем раздел...</h1>
       </div>
       <div class="quiz-header" id="question">
-         <h2 class="quiz-header__question">Загружаем вопрос...</h2>
+        <h2 class="quiz-header__question">Загружаем вопрос...</h2>
       </div>
 
       <!-- Таймер -->
       <p class="projector-paragraph">Оставшееся время на ответ:</p>
+      <div class="quiz-timer__time">
+        <p id="time">0</p>
+      </div>
       <div class="projector-timer">
         <div class="quiz-timer__progress" id="timer">
           <div class="quiz-timer__fill"></div>
         </div>
-        <div class="quiz-timer__time">
-          <p id="time">0</p>
-        </div>
       </div>
-   </div>
+
+      <!-- Добавление подсказки -->
+      <div class="projector-hint"></div>
+    </div>
+    <button class="quiz-submit submit" id="startProj">Запуск таймера</button>
   </body>
 </html>
