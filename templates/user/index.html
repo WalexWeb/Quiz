@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/reg.js" defer></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <div class="registration">
+      <!-- Заголовок регистрации -->
+      <div class="registration-header" id="header">
+        <h2 class="title">Регистрация</h2>
+        <!-- Форма регистрации -->
+        <form class="registration-form">
+          <label for="registration" class="registration-form__label">Введите название команды</label>
+          <input type="text" name="registration" value="" class="registration-form__input" id="team-name"/>
+          <label for="registration" class="registration-form__label">Введите пароль</label>
+          <input type="password" name="registration" value="" class="registration-form__input" id="team-password"/>
+          <label for="registration" class="registration-form__label">Повторите пароль</label>
+          <input type="password" name="registration" value="" class="registration-form__input" id="team-password-repeat"/>
+         </form>
+         <!-- Переход на форму входа -->
+         <p>Уже есть аккаунт? <a href="#" id="signIn">Войти</a></p>
+        <button class="registration-register submit" id="register">Зарегистрироваться</button>
+      </div>
+    </div>
+  </body>
+</html>

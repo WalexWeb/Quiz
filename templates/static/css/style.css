@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+  --shadow: -6px -6px 5px #fff, -5px -5px 30px #fff, -5px -5px 70px #fff,
+    -5px -5px 100px #fff, 6px 6px 30px #000000, 5px 5px 50px #000000;
+  --base_color: #8e44ad;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+
+  background: rgb(250, 250, 250);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== Страница регистрации =====  */
+
+.registration {
+  position: relative;
+  padding: 2rem 2rem calc(2rem + 70px);
+
+  background-color: rgb(245, 245, 245);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 600px;
+  max-width: 95vw;
+  overflow: hidden;
+}
+
+.registration-form {
+  padding: 0;
+}
+
+.registration-form__input {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.33rem;
+  background-color: rgb(252, 252, 252);
+  border: 2px solid var(--base_color);
+  border-radius: 8px;
+}
+
+.registration-form__input:focus {
+  background-color: #ebc1ff;
+}
+
+.registration-form__label,
+p {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.registration-register {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  line-height: 70px;
+}
+
+.wrong {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.33rem;
+  background-color: rgb(252, 252, 252);
+  border: 2px solid #d12828;
+  border-radius: 8px;
+  background-color: #ffc1c1;
+}
+
+.registration a {
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+/* ===== Страница с вопросами ===== */
+
+.quiz {
+  position: relative;
+  padding: 2rem 2rem calc(2rem + 80px);
+
+  background-color: rgb(245, 245, 245);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 600px;
+  max-width: 95vw;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0;
+}
+
+.quiz-header__question {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0;
+}
+
+.summary {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.result {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Таймер */
+
+.quiz-timer {
+  display: flex;
+  align-items: center;
+}
+
+.quiz-timer__progress {
+  --size: 15px;
+  flex-grow: 1;
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #fdfdfd;
+  margin-right: 16px;
+  position: relative;
+  border: 2px solid rgb(241, 241, 241);
+  margin-bottom: 5px;
+}
+
+.quiz-timer__fill {
+  position: absolute;
+  background-color: #8e44ad;
+  inset: 0;
+  width: 0%;
+  border-radius: var(--size);
+  transition: width 0.5 ease-in-out;
+}
+
+.quiz-timer__time p {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  font-size: 1.1rem;
+}
+
+.time-limited {
+  background-color: #ec1d1d;
+}
+
+/* Поле с вводом ответа */
+
+.quiz-answer {
+  padding: 0;
+}
+
+.quiz-answer input {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.33rem;
+  background-color: rgb(252, 252, 252);
+  border: 2px solid var(--base_color);
+  border-radius: 8px;
+}
+
+.quiz-answer input:focus {
+  background-color: #ebc1ff;
+}
+
+.quiz-submit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  line-height: 70px;
+}
+
+.submit {
+  background-color: var(--base_color);
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+}
+
+.submit:hover {
+  background-color: #732d91;
+}
+
+.submit:focus {
+  outline: none;
+  background-color: #5e3370;
+}
+
+.quiz-answer.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  color: #94ca00;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

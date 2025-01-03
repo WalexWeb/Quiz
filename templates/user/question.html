@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Викторина</title>
+    <script type="module" src="../js/quiz.js" defer></script>
+    <script type="module" src="../js/timer.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <div class="quiz" id="quiz">
+      <!-- Таймер -->
+      <div class="quiz-timer">
+        <div class="quiz-timer__progress" id="timer">
+          <div class="quiz-timer__fill"></div>
+        </div>
+        <div class="quiz-timer__time">
+          <p id="time">0</p>
+        </div>
+      </div>
+      <!-- Вопросы -->
+      <div class="quiz-header" id="header">
+        <h1 class="title">Загружаем раздел...</h1>
+      </div>
+      <div class="quiz-header" id="question">
+        <h2 class="quiz-header__question">Загружаем вопрос...</h2>
+      </div>
+      <form class="quiz-answer" id="answer">
+        <input type="text" class="answer" name="answer" value="" id="input" />
+      </form>
+      <button class="quiz-submit submit" id="submit">Ответить</button>
+    </div>
+  </body>
+</html>
