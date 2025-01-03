@@ -1,6 +1,9 @@
 const timerBackground = document.querySelector(".quiz-timer__progress");
 const timerFill = document.querySelector(".quiz-timer__fill");
 const seconds = document.querySelector("#time");
+// const startBtn = document.getElementById('start')
+
+// startBtn.onclick(timerProgress())
 
 function timerProgress() {
   let time = 60;
