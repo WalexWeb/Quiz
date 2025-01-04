@@ -297,7 +297,7 @@ p {
   text-align: center;
 }
 
-.rating tbody tr:nth-child(odd){
+.rating tbody tr:nth-child(odd) {
   background-color: var(--base-color);
   color: rgb(245, 245, 245);
 }
@@ -312,7 +312,71 @@ p {
 }
 
 .rating-paragraph {
-
   color: var(--base-color);
   font-weight: bold;
+}
+
+/* Панель администратора */
+
+.admin {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.admin_div {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  border: 1px solid gray;
+}
+
+#rating {
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  object-fit: fill;
+}
+
+#questions {
+  top: 0;
+  left: 50%;
+}
+
+#projector {
+  top: 50%;
+  left: 0;
+}
+#time {
+  top: 50%;
+  left: 50%;
+}
+
+.admin-timer__list {
+    list-style-type: none;
+  padding: 0;
+}
+
+.admin-timer__list li {
+  font-size: 1.2rem;
+}
+
+.admin-timer__list label {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 1rem 0.5rem;
+}
+
+.admin-timer__list label:hover {
+  background-color: #c879eb;
+}
+
+.admin-timer__list label.disabled {
+  cursor: no-drop;
+}
+
+.admin-timer__list label.disabled:hover {
+  cursor: no-drop;
+  background-color: transparent;
 }

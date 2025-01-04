@@ -1,4 +1,4 @@
-import { timerProgress } from "./timer.js";
+// import { timerProgress } from "./timer.js";
 
 const headerContainer = document.querySelector("#header");
 const questionContainer = document.querySelector("#question");
@@ -11,7 +11,7 @@ let questionIndex = 0;
 // clearPage();
 // showQuestion();
 
-submitButton.addEventListener("click", timerProgress)
+// submitButton.addEventListener("click", timerProgress)
 
 // Очистка текстовых полей
 function clearPage() {
