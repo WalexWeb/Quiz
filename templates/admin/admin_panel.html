@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="admin">
+      <!-- Рейтинг -->
       <div class="admin-rating rating admin_div" id="rating">
         <h1 class="title">Рейтинг команд</h1>
         <table class="admin-rating__table">
@@ -81,37 +82,57 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Выбор вопроса -->
       <div class="admin-questions admin_div" id="questions">
         <h1 class="title">Выбор вопроса</h1>
 
-        <button class="quiz-submit submit" id="newQuestion">Выбрать вопрос</button>
+        <button class="quiz-submit submit" id="newQuestion">
+          Выбрать вопрос
+        </button>
       </div>
       <div class="admin-timer admin_div" id="time">
         <h1 class="title">Настройки таймера</h1>
         <ul class="admin-timer__list">
           <li>
             <label>
-              <input type="radio" name="time" class="admin-timer__input" value="40"/>
+              <input
+                type="radio"
+                name="time"
+                class="admin-timer__input"
+                value="40"
+              />
               <span>40 секунд</span>
             </label>
           </li>
           <li>
             <label>
-              <input type="radio" name="time" class="admin-timer__input" value="60"/>
+              <input
+                type="radio"
+                name="time"
+                class="admin-timer__input"
+                value="60"
+              />
               <span>60 секунд</span>
             </label>
           </li>
         </ul>
-        <div class="quiz-timer" >
-         <div class="quiz-timer__progress" id="timer">
-           <div class="quiz-timer__fill"></div>
-         </div>
-         <div class="quiz-timer__time">
-           <p id="time">0</p>
-         </div>
-       </div>
-        <button class="quiz-submit submit" id="adminStart">Запуск таймера</button>
+
+        <!-- Настройки таймера -->
+        <div class="quiz-timer">
+          <div class="quiz-timer__progress" id="timer">
+            <div class="quiz-timer__fill"></div>
+          </div>
+          <div class="quiz-timer__time">
+            <p id="time">0</p>
+          </div>
+        </div>
+        <button class="quiz-submit submit" id="adminStart">
+          Запуск таймера
+        </button>
       </div>
+
+      <!-- Проектор -->
       <div class="admin-projector admin_div" id="projector">
         <h1 class="title">Проектор</h1>
       </div>
