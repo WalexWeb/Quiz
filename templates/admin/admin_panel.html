@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="../js/timer.js" defer></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Панель администратора</title>
+  </head>
+  <body>
+    <div class="admin">
+      <!-- Рейтинг -->
+      <div class="admin-rating rating admin_div" id="rating">
+        <h1 class="title">Рейтинг команд</h1>
+        <table class="admin-rating__table">
+          <caption class="rating-paragraph">
+            Рейтинг по количеству набранных баллов
+          </caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Команда</th>
+              <th>Факультет</th>
+              <th>Баллы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Reload</td>
+              <td>ФПСОИБ</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>Творожки</td>
+              <td>ФПСОПП</td>
+              <td>200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Выбор вопроса -->
+      <div class="admin-questions admin_div" id="questions">
+        <h1 class="title">Выбор вопроса</h1>
+
+        <button class="quiz-submit submit" id="newQuestion">
+          Выбрать вопрос
+        </button>
+      </div>
+      <div class="admin-timer admin_div" id="time">
+        <h1 class="title">Настройки таймера</h1>
+        <ul class="admin-timer__list">
+          <li>
+            <label>
+              <input
+                type="radio"
+                name="time"
+                class="admin-timer__input"
+                value="40"
+              />
+              <span>40 секунд</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input
+                type="radio"
+                name="time"
+                class="admin-timer__input"
+                value="60"
+              />
+              <span>60 секунд</span>
+            </label>
+          </li>
+        </ul>
+
+        <!-- Настройки таймера -->
+        <div class="quiz-timer">
+          <div class="quiz-timer__progress" id="timer">
+            <div class="quiz-timer__fill"></div>
+          </div>
+          <div class="quiz-timer__time">
+            <p id="time">0</p>
+          </div>
+        </div>
+        <button class="quiz-submit submit" id="adminStart">
+          Запуск таймера
+        </button>
+      </div>
+
+      <!-- Проектор -->
+      <div class="admin-projector admin_div" id="projector">
+        <h1 class="title">Проектор</h1>
+      </div>
+    </div>
+  </body>
+</html>
